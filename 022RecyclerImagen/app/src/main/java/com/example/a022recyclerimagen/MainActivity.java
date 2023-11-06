@@ -1,4 +1,4 @@
-package com.example.a021recyclerview;
+package com.example.a022recyclerimagen;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<Datos> list= Datos.poblarDatos();
+        List<Datos> list= Datos.poblarDatos(getApplicationContext());
        /* list.add("China");
         list.add("France");
         list.add("Germany");

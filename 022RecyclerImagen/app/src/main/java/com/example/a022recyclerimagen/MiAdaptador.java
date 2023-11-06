@@ -1,8 +1,10 @@
-package com.example.a021recyclerview;
+package com.example.a022recyclerimagen;
+
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -33,6 +35,7 @@ public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.MiViewHolder> 
 
     holder.texto.setText(cadenas.getNombre());
     holder.detalle.setText(cadenas.getDescripcion());
+    holder.imagen.setImageResource(cadenas.getImagen());
 
     }
 
@@ -53,11 +56,13 @@ public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.MiViewHolder> 
     public class MiViewHolder extends RecyclerView.ViewHolder{
         public TextView texto;
         public TextView detalle;
+        public ImageView imagen;
 
         public MiViewHolder(View itemView){
             super(itemView);
-            texto= itemView.findViewById(R.id.Texto);
-            detalle= itemView.findViewById(R.id.Detalle);
+            texto= itemView.findViewById(R.id.texto);
+            detalle= itemView.findViewById(R.id.detalle);
+            imagen= itemView.findViewById(R.id.imagen);
 
         }
     }
