@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ejercicioexamen"
+    namespace = "com.example.ejercicioexamenlistview"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.ejercicioexamen"
+        applicationId = "com.example.ejercicioexamenlistview"
         minSdk = 28
         targetSdk = 33
         versionCode = 1
