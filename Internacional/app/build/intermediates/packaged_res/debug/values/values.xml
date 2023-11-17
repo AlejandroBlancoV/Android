@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Internacional</string>
+    <string name="cuatro">Clave</string>
+    <string name="dos">Apellidos</string>
+    <string name="tres">Email</string>
+    <string name="uno">Nombre</string>
+    <style name="Base.Theme.Internacional" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Internacional" parent="Base.Theme.Internacional"/>
+</resources>

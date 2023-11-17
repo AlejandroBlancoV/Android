@@ -1,0 +1,23 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id editText1
+id editText2
+id editText3
+id editText4
+id textView
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string cuatro
+string dos
+string tres
+string uno
+style Base.Theme.Internacional
+style Theme.Internacional
+xml backup_rules
+xml data_extraction_rules
