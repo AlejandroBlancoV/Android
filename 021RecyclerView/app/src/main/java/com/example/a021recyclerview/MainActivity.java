@@ -17,14 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<Datos> list= Datos.poblarDatos();
-       /* list.add("China");
-        list.add("France");
-        list.add("Germany");
-        list.add("India");
-        list.add("Russia");
-        list.add("United Kingdom");
-        list.add("United States");
+        List<String> list= new ArrayList<>();
         list.add("China");
         list.add("France");
         list.add("Germany");
@@ -45,7 +38,14 @@ public class MainActivity extends AppCompatActivity {
         list.add("India");
         list.add("Russia");
         list.add("United Kingdom");
-        list.add("United States");*/
+        list.add("United States");
+        list.add("China");
+        list.add("France");
+        list.add("Germany");
+        list.add("India");
+        list.add("Russia");
+        list.add("United Kingdom");
+        list.add("United States");
        // @SuppressLint({"MissingInflatedId","LocalSuppress"})
         RecyclerView recyclerView= findViewById(R.id.reciclaje);
         recyclerView.setHasFixedSize(true);
@@ -59,6 +59,4 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(miAdaptador);
 
     }
-
-
 }
