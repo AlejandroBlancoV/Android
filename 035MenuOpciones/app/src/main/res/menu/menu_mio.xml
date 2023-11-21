@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="@string/menu_settings"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/desajustes"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:title="@string/desajustes"
+        app:showAsAction="never"></item>
+
+</menu>
