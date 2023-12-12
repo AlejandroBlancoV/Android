@@ -9,32 +9,85 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
-TextView textView1;
-TextView textView2;
-Button sumar;
-Integer resSuma=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        textView1.findViewById(R.id.num1);
-        textView2.findViewById(R.id.num2);
-        Bundle llegar =  getIntent().getExtras();
-        String texto1= llegar.getString("n1");
-        String texto2= llegar.getString("n2");
-        textView1.setText(texto1);
-        textView2.setText(texto2);
-resSuma=Integer.parseInt(texto1)+Integer.parseInt(texto2);
-        sumar= findViewById(R.id.boton2);
-        sumar.setOnClickListener(view -> sumar(view));
 
+        if(getIntent() != null && getIntent().hasExtra(Intent.EXTRA_TEXT)) {
+
+            TextView textview = (TextView) findViewById(R.id.n1);
+            TextView textview2 = (TextView) findViewById(R.id.n2);
+
+            Intent intent = getIntent();
+            String text = intent.getStringExtra(Intent.EXTRA_TEXT).toString();
+
+            String[] numeros = text.split(",");
+            textview.setText(numeros[0]+" ");
+            textview2.setText(numeros[1]+" ");
+        }
     }
 
-    public void sumar(View view){
-        Intent returnIntent= new Intent();
-        returnIntent.putExtra(MainActivity.REQUEST_RESULT,String.valueOf(resSuma));
-        setResult(RESULT_OK,returnIntent);
+
+    public void suma(View view) {
+        TextView textView1 = findViewById(R.id.n1);
+        TextView textView2 = findViewById(R.id.n2);
+
+        double num1 = Double.parseDouble(textView1.getText().toString());
+        double num2 = Double.parseDouble(textView2.getText().toString());
+
+        double resultado = num1 + num2;
+
+        ((TextView) findViewById(R.id.resultado)).setText(String.valueOf(resultado));
+    }
+
+    public void resta(View view) {
+        TextView textView1 = findViewById(R.id.n1);
+        TextView textView2 = findViewById(R.id.n2);
+
+        double num1 = Double.parseDouble(textView1.getText().toString());
+        double num2 = Double.parseDouble(textView2.getText().toString());
+
+        double resultado = num1 - num2;
+
+        ((TextView) findViewById(R.id.resultado)).setText(String.valueOf(resultado));
+    }
+
+    public void multiplicacion(View view) {
+        TextView textView1 = findViewById(R.id.n1);
+        TextView textView2 = findViewById(R.id.n2);
+
+        double num1 = Double.parseDouble(textView1.getText().toString());
+        double num2 = Double.parseDouble(textView2.getText().toString());
+
+        double resultado = num1 * num2;
+
+        ((TextView) findViewById(R.id.resultado)).setText(String.valueOf(resultado));
+    }
+
+    public void division(View view) {
+        TextView textView1 = findViewById(R.id.n1);
+        TextView textView2 = findViewById(R.id.n2);
+
+        double num1 = Double.parseDouble(textView1.getText().toString());
+        double num2 = Double.parseDouble(textView2.getText().toString());
+
+        if (num2 != 0) {
+            double resultado = num1 / num2;
+            ((TextView) findViewById(R.id.resultado)).setText(String.valueOf(resultado));
+        } else {
+            // Manejo de la división por cero
+            ((TextView) findViewById(R.id.resultado)).setText("Error: División por cero");
+        }
+    }
+
+    public void volver(View view) {
+
+        double n = Double.parseDouble(((TextView) findViewById(R.id.resultado)).getText().toString());
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra(MainActivity.REQUEST_RESULT, n);
+        setResult(RESULT_OK, returnIntent);
         finish();
 
     }
