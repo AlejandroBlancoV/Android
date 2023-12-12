@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Foto1.jpg</string>
+    <string name="upload">Subir</string>
+    <string name="scale">Escalar</string>
+    <string name="resize">Redimensionar</string>
+    <string name="crop">Cortar</string>
+</resources>

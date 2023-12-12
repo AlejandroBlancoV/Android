@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:layout_marginBottom="479dp"
-        android:text="Hello World!"
+        android:text="Ejercicio1B"
         app:layout_constraintBottom_toTopOf="@+id/resFinal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
