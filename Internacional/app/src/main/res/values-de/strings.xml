@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Internacional</string>
+    <string name="uno">Vorname</string>
+    <string name="dos">Nachname</string>
+    <string name="tres">Email</string>
+    <string name="cuatro">Passwort</string>
+</resources>

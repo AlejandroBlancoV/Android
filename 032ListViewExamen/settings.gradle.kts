@@ -13,5 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "EjercicioExamenListView"
+rootProject.name = "032 ListViewExamen"
 include(":app")
+ 

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">039RecyclerViewContextual</string>
+    <string name="delete_all">Delete All</string>
+    <string name="macro_fake">Fake</string>
+</resources>

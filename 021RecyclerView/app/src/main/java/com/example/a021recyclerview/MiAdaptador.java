@@ -12,8 +12,8 @@ import java.util.List;
 
 public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.MiViewHolder> {
 
-    private List<String> nameList;
-    public MiAdaptador(List<String> list){
+    private List<Datos> nameList;
+    public MiAdaptador(List<Datos> list){
         nameList=list;
     }
 
@@ -28,8 +28,12 @@ public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.MiViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MiViewHolder holder, int position) {
-    final String name= nameList.get(position);
-    holder.textView.setText(name);
+        final Datos cadenas= nameList.get(position);
+
+
+    holder.texto.setText(cadenas.getNombre());
+    holder.detalle.setText(cadenas.getDescripcion());
+
     }
 
     @Override
@@ -47,11 +51,14 @@ public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.MiViewHolder> 
     //Clase interna
 
     public class MiViewHolder extends RecyclerView.ViewHolder{
-        public TextView textView;
+        public TextView texto;
+        public TextView detalle;
 
         public MiViewHolder(View itemView){
             super(itemView);
-            textView= itemView.findViewById(R.id.Texto);
+            texto= itemView.findViewById(R.id.Texto);
+            detalle= itemView.findViewById(R.id.Detalle);
+
         }
     }
 
