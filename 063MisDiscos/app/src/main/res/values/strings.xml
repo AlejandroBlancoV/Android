@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">063MisDiscos</string>
+    <string name="Grupo">Grupo</string>
+    <string name="disco">Titulo del disco</string>
+    <string name="añadir">Añadir</string>
+    <string name="borrar">Borrar</string>
+</resources>

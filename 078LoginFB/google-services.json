@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "46449596144",
+    "project_id": "testlog-e8680",
+    "storage_bucket": "testlog-e8680.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46449596144:android:a4e8bce76d0bc0c65dd435",
+        "android_client_info": {
+          "package_name": "com.example.a078loginfb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD0tDaRY3sMWgE2m7Ugt4Fvt_JdsU2EUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
