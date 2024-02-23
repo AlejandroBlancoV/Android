@@ -19,12 +19,12 @@ import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.develou.lawyersapp.R;
-import com.develou.lawyersapp.addeditlawyer.AddEditLawyerActivity;
-import com.develou.lawyersapp.data.Lawyer;
-import com.develou.lawyersapp.data.LawyersDbHelper;
-import com.develou.lawyersapp.lawyers.LawyersActivity;
-import com.develou.lawyersapp.lawyers.LawyersFragment;
+import com.example.a064abogados.R;
+import com.example.a064abogados.addeditlawyer.AddEditLawyerActivity;
+import com.example.a064abogados.data.Lawyer;
+import com.example.a064abogados.data.LawyersDbHelper;
+import com.example.a064abogados.lawyers.LawyersActivity;
+import com.example.a064abogados.lawyers.LawyersFragment;
 
 /**
  * Vista para el detalle del abogado
@@ -89,16 +89,17 @@ public class LawyerDetailFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_edit:
-                showEditScreen();
-                break;
-            case R.id.action_delete:
-                new DeleteLawyerTask().execute();
-                break;
+        int itemId = item.getItemId();
+
+        if (itemId == R.id.action_edit) {
+            showEditScreen();
+        } else if (itemId == R.id.action_delete) {
+            new DeleteLawyerTask().execute();
         }
+
         return super.onOptionsItemSelected(item);
     }
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

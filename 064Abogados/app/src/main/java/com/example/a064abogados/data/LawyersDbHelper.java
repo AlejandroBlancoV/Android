@@ -5,7 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import static com.develou.lawyersapp.data.LawyersContract.LawyerEntry;
+import com.example.a064abogados.data.LawyersContract.LawyerEntry;
 
 /**
  * Manejador de la base de datos
@@ -38,16 +38,16 @@ public class LawyersDbHelper extends SQLiteOpenHelper {
     }
 
     private void mockData(SQLiteDatabase sqLiteDatabase) {
-        mockLawyer(sqLiteDatabase, new Lawyer("Carlos Perez", "Abogado penalista",
-                "300 200 1111", "Gran profesional con experiencia de 5 años en casos penales.",
+        mockLawyer(sqLiteDatabase, new Lawyer("Walter White", "Meth Dealer",
+                "300 200 1111", "Jesse we need to coock.",
                 "carlos_perez.jpg"));
-        mockLawyer(sqLiteDatabase, new Lawyer("Daniel Samper", "Abogado accidentes de tráfico",
-                "300 200 2222", "Gran profesional con experiencia de 5 años en accidentes de tráfico.",
+        mockLawyer(sqLiteDatabase, new Lawyer("Jesse Pinkman", "Meth Dealer",
+                "300 200 2222", "Yeah b*tch!.",
                 "daniel_samper.jpg"));
-        mockLawyer(sqLiteDatabase, new Lawyer("Lucia Aristizabal", "Abogado de derechos laborales",
-                "300 200 3333", "Gran profesional con más de 3 años de experiencia en defensa de los trabajadores.",
+        mockLawyer(sqLiteDatabase, new Lawyer("Skyler", "Ex-wife of Walter  White",
+                "300 200 3333", "...",
                 "lucia_aristizabal.jpg"));
-        mockLawyer(sqLiteDatabase, new Lawyer("Marina Acosta", "Abogado de familia",
+        mockLawyer(sqLiteDatabase, new Lawyer("Jane", "Drogadict",
                 "300 200 4444", "Gran profesional con experiencia de 5 años en casos de familia.",
                 "marina_acosta.jpg"));
         mockLawyer(sqLiteDatabase, new Lawyer("Olga Ortiz", "Abogado de administración pública",
@@ -62,6 +62,12 @@ public class LawyersDbHelper extends SQLiteOpenHelper {
         mockLawyer(sqLiteDatabase, new Lawyer("Tom Bonz", "Abogado penalista",
                 "300 200 1111", "Gran profesional con experiencia de 5 años en casos penales.",
                 "tom_bonz.jpg"));
+        mockLawyer(sqLiteDatabase, new Lawyer("Jimmy McGill", "Abogado criminalista",
+                "300 200 5555", "Gran profesional con experiencia de 5 años en casos penales.",
+                "jimmy_mcgill.jpg"));
+        mockLawyer(sqLiteDatabase, new Lawyer("Mario 64", "Abogado de setas",
+                "300 200 64", "Gran profesional con experiencia de 5 años en casos penales.",
+                "mario.jpg"));
     }
 
     public long mockLawyer(SQLiteDatabase db, Lawyer lawyer) {

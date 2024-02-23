@@ -12,13 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._071ProviderDDBB"
         tools:targetApi="31">
-        <activity android:name=".ActividadListaAlquileres" android:label="@string/app_name" android:theme="@style/Theme._071ProviderDDBB.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <provider android:name=".provider.ProviderApartamentos" android:authorities="com.herprogramacion.alquileres" android:enabled="true" android:exported="false"/>
+    <activity
+        android:name=".ActividadListaAlquileres"
+        android:exported="true"
+        android:label="@string/app_name"
+        android:theme="@style/Theme._071ProviderDDBB">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <provider
+        android:name=".provider.ProviderApartamentos"
+        android:authorities="com.herprogramacion.alquileres"
+        android:enabled="true"
+        android:exported="false"/>
     </application>
 
 </manifest>

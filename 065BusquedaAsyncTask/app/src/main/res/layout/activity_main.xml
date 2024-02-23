@@ -9,7 +9,7 @@
         android:id="@+id/EditText01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Palabra a buscar" />
+        android:hint="Palabra a buscar" />
 
     <Button
         android:id="@+id/Button01"

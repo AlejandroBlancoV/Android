@@ -1,9 +1,12 @@
 package com.example.a064abogados.lawyers;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,14 +14,10 @@ import android.widget.CursorAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.core.graphics.drawable.RoundedBitmapDrawable;
-import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.example.a064abogados.R;
-import com.example.a064abogados.data.LawyersContract;
-
+import com.example.a064abogados.data.LawyersContract.LawyerEntry;
 
 /**
  * Adaptador de abogados
@@ -42,8 +41,8 @@ public class LawyersCursorAdapter extends CursorAdapter {
         final ImageView avatarImage = (ImageView) view.findViewById(R.id.iv_avatar);
 
         // Get valores.
-        String name = cursor.getString(cursor.getColumnIndex(LawyersContract.LawyerEntry.NAME));
-        String avatarUri = cursor.getString(cursor.getColumnIndex(LawyersContract.LawyerEntry.AVATAR_URI));
+        @SuppressLint("Range") String name = cursor.getString(cursor.getColumnIndex(LawyerEntry.NAME));
+        @SuppressLint("Range") String avatarUri = cursor.getString(cursor.getColumnIndex(LawyerEntry.AVATAR_URI));
 
         // Setup.
         nameText.setText(name);

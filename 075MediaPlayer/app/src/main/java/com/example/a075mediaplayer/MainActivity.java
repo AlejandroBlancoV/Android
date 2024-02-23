@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.io.IOException;
 
 
-public class MainActivity extends Activity{
+public class MainActivity extends Activity {
 
     MediaPlayer mediaPlayer;
 
@@ -20,11 +20,11 @@ public class MainActivity extends Activity{
         setContentView(R.layout.activity_main);
 
         mediaPlayer = MediaPlayer.create(this, R.raw.adrenalina);
-        mediaPlayer.
+
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
-                TextView t = (TextView) findViewById(R.id.estado);
+                TextView t = (TextView) findViewById(R.id.textView);
                 mediaPlayer.release();
                 t.setText("La reproducción ha terminado, acabo de hacer un release()");
 
@@ -33,7 +33,7 @@ public class MainActivity extends Activity{
     }
 
     public void play(View view){
-        TextView t = (TextView) findViewById(R.id.estado);
+        TextView t = (TextView) findViewById(R.id.textView);
         if (mediaPlayer.isPlaying()){
             t.setText("Ya estás escuchando música, ¿qué más quieres chaval?");
         }
@@ -44,7 +44,7 @@ public class MainActivity extends Activity{
     }
 
     public void stop(View view) throws IOException {
-        TextView t = (TextView) findViewById(R.id.estado);
+        TextView t = (TextView) findViewById(R.id.textView);
         if (mediaPlayer!=null && mediaPlayer.isPlaying()) {
             mediaPlayer.stop();
 
@@ -63,7 +63,7 @@ public class MainActivity extends Activity{
     }
 
     public void pause(View view){
-        TextView t = (TextView) findViewById(R.id.estado);
+        TextView t = (TextView) findViewById(R.id.textView);
         if (mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
             t.setText("Acabas de pausar tu MP");
@@ -72,6 +72,4 @@ public class MainActivity extends Activity{
             t.setText("Tu MP no está en ejecución, luego no lo puedes pausar");
         }
     }
-
-
 }

@@ -1,6 +1,7 @@
 package com.example.a064abogados.lawyers;
 
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -20,6 +21,7 @@ import com.example.a064abogados.addeditlawyer.AddEditLawyerActivity;
 import com.example.a064abogados.data.LawyersDbHelper;
 import com.example.a064abogados.lawyerdetail.LawyerDetailActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.example.a064abogados.data.LawyersContract.LawyerEntry;
 
 
 /**
@@ -61,7 +63,7 @@ public class LawyersFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Cursor currentItem = (Cursor) mLawyersAdapter.getItem(i);
-                String currentLawyerId = currentItem.getString(
+                @SuppressLint("Range") String currentLawyerId = currentItem.getString(
                         currentItem.getColumnIndex(LawyerEntry.ID));
 
                 showDetailScreen(currentLawyerId);

@@ -6,8 +6,8 @@ import android.view.Menu;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.develou.lawyersapp.R;
-import com.develou.lawyersapp.lawyers.LawyersActivity;
+import com.example.a064abogados.R;
+import com.example.a064abogados.lawyers.LawyersActivity;
 
 public class LawyerDetailActivity extends AppCompatActivity {
 

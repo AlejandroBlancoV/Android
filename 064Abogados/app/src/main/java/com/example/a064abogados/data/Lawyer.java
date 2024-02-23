@@ -1,9 +1,10 @@
 package com.example.a064abogados.data;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.Cursor;
 
-import com.develou.lawyersapp.data.LawyersContract.LawyerEntry;
+import com.example.a064abogados.data.LawyersContract.LawyerEntry;
 
 import java.util.UUID;
 
@@ -29,6 +30,7 @@ public class Lawyer {
         this.avatarUri = avatarUri;
     }
 
+    @SuppressLint("Range")
     public Lawyer(Cursor cursor) {
         id = cursor.getString(cursor.getColumnIndex(LawyerEntry.ID));
         name = cursor.getString(cursor.getColumnIndex(LawyerEntry.NAME));

@@ -5,6 +5,10 @@ import android.app.Activity;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
+
+import com.example.a064abogados.R;
+import com.example.a064abogados.data.Lawyer;
+import com.example.a064abogados.data.LawyersDbHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -14,9 +18,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.develou.lawyersapp.R;
-import com.develou.lawyersapp.data.Lawyer;
-import com.develou.lawyersapp.data.LawyersDbHelper;
 
 import androidx.fragment.app.Fragment;
 /**

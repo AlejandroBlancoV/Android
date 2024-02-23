@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             textView.setText("Hola "+name);
         }
         else{
-            textView.setText("Bienvenido de volta "+name+" !");
+            textView.setText("Bienvenido de vuelta NONAME");
         }
 
         mEditTextName=(EditText)findViewById(R.id.escribir);
